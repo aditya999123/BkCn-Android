@@ -121,7 +121,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
             sharedPrefs.setMobile(mobile);
             sharedPrefs.setUsername(name);
-            sharedPrefs.setEmailId(email);
             sharedPrefs.setAccessToken(loginData.getToken());
             Intent i = new Intent(LoginActivity.this, OtpActivity.class);
             i.putExtra(Keys.KEY_MOBILE, mobile);

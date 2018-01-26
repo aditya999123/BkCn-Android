@@ -4,9 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-/**
- * Created by Meghal on 6/9/2016.
- */
 public class SharedPrefs {
 
     // Shared preferences file name

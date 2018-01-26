@@ -1,8 +1,5 @@
 package com.kyb.hack36.kyb.helper;
 
-/**
- * Created by vrihas on 6/21/2017.
- */
 //All the Urls will be here in this class..!!
 public class Urls {
 
