@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#414141</color>
+    <color name="colorAccent">#FF4025</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="darkBackground">#99000000</color>
+    <color name="dak_grey">#696969</color>
+    <color name="charcoal">#333327</color>
+    <color name="brown">#8B4513</color>
+    <color name="gray">#424242</color>
+    <color name="darkgray">#212121</color>
+    <color name="hyperlink_color">#FFC107</color>
+
+</resources>
