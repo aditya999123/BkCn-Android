@@ -32,8 +32,12 @@ public class Qr_Text extends AppCompatActivity implements QrViewInterface{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr__text);
+        qr_details=getIntent().getStringExtra("qr_key");
         initialize();
-        qr_details=getIntent().getExtras().getString(Keys.KEY_PRODUCT_ID);
+        qrTextView.setText(qr_details);
+        analysis_layout.setVisibility(View.GONE);
+        transfer_layout.setVisibility(View.GONE);
+//        qr_details="fvrgtrtgbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv";
         owner_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -87,11 +87,12 @@ public class Home extends AppCompatActivity implements ActivityCompat.OnRequestP
     // "points" : points where QR control points are placed
     @Override
     public void onQRCodeRead(String text, PointF[] points) {
-        
-        resultTextView.setText(text);
-        pointsOverlayView.setPoints(points);
-        Intent in=new Intent(this,Qr_Text.class);
-        in.putExtra(Keys.KEY_NAME,text);
+
+//        resultTextView.setText(text);
+//        pointsOverlayView.setPoints(points);
+        Intent in=new Intent(Home.this,Qr_Text.class);
+        Log.d("herenow",text);
+        in.putExtra("qr_key",text);
         startActivity(in);
     }
 

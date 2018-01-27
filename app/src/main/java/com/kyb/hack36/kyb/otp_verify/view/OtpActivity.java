@@ -99,14 +99,7 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
         loginActivity.proceed(v);
         */
 //        loginPresenter= new LoginPresenter(LoginActivity.class(getBaseContext()),new RetrofitProvider());
-//        loginPresenter.getLoginData(sharedPrefs.getUsername(),sharedPrefs.getMobile(),sharedPrefs.getEmail());
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                btn_resend_otp.setVisibility(View.VISIBLE);
-            }
-        },30000);
+//        loginPresenter.getLoginData(sharedPrefs.getUsername(),sharedPrefs.getMobile(),sharedPrefs.getEmail())
 
 
     }
