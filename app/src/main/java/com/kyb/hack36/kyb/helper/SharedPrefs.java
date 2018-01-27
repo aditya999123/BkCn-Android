@@ -12,10 +12,11 @@ public class SharedPrefs {
     private static final String KEY_IS_OTPLOGGEDIN = "isOtpLoggedIn";
     private static final String KEY_USERNAME = "username";
     private static final String KEY_MOBILE = "mobile";
-    private static final String KEY_EMAIL = "email";
+    private static final String KEY_EMAIL = "password";
     private static final String KEY_PHOTO_URL = "photoUrl";
     private static final String KEY_USER_ID = "userId";
     private static final String FIRSTBLOG="isFirstBlog";
+    private static final String KEY_PUBLIC_KEY="public_key";
     private static final String KEY_LOGIN_TYPE = "loginType";
     private static final String KEY_FCM = "fcm";
     private static final String KEY_ACCESS_TOKEN = "access_token";
@@ -60,6 +61,15 @@ public class SharedPrefs {
 
         return pref.getString(KEY_USERNAME, "USER NAME");
     }
+    public String getPublicKey() {
+
+        return pref.getString(KEY_PUBLIC_KEY, "");
+    }
+
+    public void setKeyPublicKey(String publicKey) {
+        editor.putString(KEY_PUBLIC_KEY, publicKey);
+        editor.commit();
+    }
 
 
     public void setFCM(String fcm) {
@@ -75,8 +85,6 @@ public class SharedPrefs {
 
         editor.putString(KEY_USERNAME, username);
         editor.commit();
-
-
     }
 
     public String getUserId() {

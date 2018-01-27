@@ -17,10 +17,10 @@ public class LoginPresenter implements LoginPresenterImpl {
     }
 
     @Override
-    public void getLoginData(String name,String mobile,String email) {
+    public void getLoginData(String mobile,String email) {
 
         login.showProgressBar(true);
-        retrofitProvider.loginData(name,mobile,email,new LoginCallback() {
+        retrofitProvider.loginData(mobile,email,new LoginCallback() {
             @Override
             public void onLoginSuccess(LoginData loginResponse) {
                 if(loginResponse.isSuccess()) {

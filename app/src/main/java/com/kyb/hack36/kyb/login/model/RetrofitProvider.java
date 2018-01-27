@@ -21,7 +21,7 @@ public class RetrofitProvider implements ProviderInterface {
 
 
     @Override
-    public void loginData(String name, String mobile, String email, final LoginCallback loginCallback) {
+    public void loginData(String mobile, String email, final LoginCallback loginCallback) {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -29,7 +29,7 @@ public class RetrofitProvider implements ProviderInterface {
 
         Retrofit retrofit= new Retrofit.Builder().baseUrl(Urls.BASE_URL).client(client).addConverterFactory(GsonConverterFactory.create()).build();
         RequestLogin requestLogin = retrofit.create(RequestLogin.class);
-        Call<LoginData> call= requestLogin.getJSON(name,mobile,email);
+        Call<LoginData> call= requestLogin.getJSON(mobile,email);
         call.enqueue(new Callback<LoginData>() {
             @Override
             public void onResponse(Call<LoginData> call, Response<LoginData> response) {

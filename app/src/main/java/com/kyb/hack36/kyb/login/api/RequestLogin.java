@@ -13,5 +13,5 @@ public interface RequestLogin {
 
     @FormUrlEncoded
     @POST(Urls.REQUEST_LOGIN)
-    Call<LoginData> getJSON(String s, @Field("name") String name, @Field("contact_no") String mobile);
+    Call<LoginData> getJSON(@Field("mobile") String mobile, @Field("public_key") String public_key);
 }
