@@ -18,13 +18,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitProvider implements ProviderInterface {
 
+
+
     @Override
     public void loginData(String name, String mobile, String email, final LoginCallback loginCallback) {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().connectTimeout(10, TimeUnit.SECONDS)
-                .readTimeout(10, TimeUnit.SECONDS).writeTimeout(10, TimeUnit.SECONDS).addInterceptor(interceptor).build();
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
         Retrofit retrofit= new Retrofit.Builder().baseUrl(Urls.BASE_URL).client(client).addConverterFactory(GsonConverterFactory.create()).build();
         RequestLogin requestLogin = retrofit.create(RequestLogin.class);

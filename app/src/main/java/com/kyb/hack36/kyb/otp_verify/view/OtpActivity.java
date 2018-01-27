@@ -14,23 +14,18 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.kyb.hack36.kyb.Home.Home;
+//import com.bumptech.glide.Glide;
+import com.kyb.hack36.kyb.Home.view.Home;
 import com.kyb.hack36.kyb.R;
 import com.kyb.hack36.kyb.helper.Keys;
 import com.kyb.hack36.kyb.helper.NetworkUtils;
 import com.kyb.hack36.kyb.helper.SharedPrefs;
-import com.kyb.hack36.kyb.login.model.LoginData;
-import com.kyb.hack36.kyb.login.model.RetrofitProvider;
 import com.kyb.hack36.kyb.login.presenter.LoginPresenter;
-import com.kyb.hack36.kyb.login.view.LoginActivity;
-import com.kyb.hack36.kyb.login.view.LoginView;
 import com.kyb.hack36.kyb.otp_verify.model.OtpData;
 import com.kyb.hack36.kyb.otp_verify.presenter.OtpVerifyPresenter;
 import com.kyb.hack36.kyb.otp_verify.presenter.OtpVerifyPresenterImp;
 import com.kyb.hack36.kyb.otp_verify.provider.RetrofitOtpVerifyHelper;
 
-import butterknife.ButterKnife;
 
 public class OtpActivity extends AppCompatActivity implements OtpView{
 
@@ -52,7 +47,6 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
 
         //Glide.with(this).load(R.drawable.password_black).into(oi);
 
